@@ -12,7 +12,7 @@ export const searchReducer = (state = initialState, action) => {
     case SEARCH_SUCCESS:
       return {
         ...state,
-        results: action.results,
+        results: [ ...state.results, action.results],
       };
     default:
       return state;
